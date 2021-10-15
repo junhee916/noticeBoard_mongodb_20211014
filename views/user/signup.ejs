@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<form action="/user/signup" method="post">
+    <!-- signup total layout-->
+    <div>
+
+        <!--font size big-->
+        <div>signup</div>
+
+        <!--small row-->
+        <div>
+            <div>name: </div>
+            <input name="name">
+        </div>
+
+        <div>
+            <div>email: </div>
+            <input name="email">
+        </div>
+
+        <div>
+            <div>password: </div>
+            <input name="password">
+        </div>
+
+        <!--btn ctrl row-->
+        <div>
+            <div onclick="document.forms[0].submit()">clear</div>
+
+            <div onclick="window.location.href='/login'">login</div>
+        </div>
+    </div>
+</form>
+
+    <script src="/comm_modules/user.js"></script>
+
+</body>
+</html>
