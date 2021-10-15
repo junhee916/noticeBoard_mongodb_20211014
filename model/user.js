@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
+const autoIncrement = require('mongoose-sequence')(mongoose)
 
 const userSchema = mongoose.Schema(
     {
+        _id : Number,
         name : {
             type : String
         },
@@ -21,6 +23,8 @@ const userSchema = mongoose.Schema(
         timestamps : true
     }
 )
+
+userSchema.plugin(autoIncrement)
 
 userSchema.pre('save', async function(next){
 
